@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich-Text</title>
+
+    <!---- Css Style ---->
+    <link rel="stylesheet" href="style.css"/>
+    <!---- Font Awesome Icons ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!---- Google Fonts ---->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/> 
+</head>
+<body>
+    <div class="container">
+        <div class="options">
+            
+            <!---- Formatação de texto ---->
+            <button id="bold" class="option-button format">
+                <i class="fa-solid fa-bold" style="color: #000000;"></i>
+            </button>
+            <button id="italic" class="option-button format">
+                <i class="fa-solid fa-italic" style="color: #000000;"></i>
+            </button>
+            <button id="underline" class="option-button format">
+                <i class="fa-solid fa-underline" style="color: #000000;"></i>
+            </button>
+            <button id="strikethrough" class="option-button format">
+                <i class="fa-solid fa-strikethrough" style="color: #000000;"></i>
+            </button>
+            <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript" style="color: #000000"></i>
+            </button>
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript" style="color: #000000"></i>
+            </button>
+            
+            <!---- Lista ---->
+            <button id="insertOrderedList" class="option-button">
+                <div class="fa-solid fa-list-ol" style="color: #000000;"></div>
+            </button>
+            <button id="insertUnorderedList" class="option-button">
+                <div class="fa-solid fa-list" style="color: #000000;"></div>
+            </button>
+            
+            <!---- Desfazer/Refazer ---->
+            <button id="undo" class="option-button">
+                <div class="fa-solid fa-rotate-left" style="color: #000000;"></div>
+            </button>
+            <button id="redo" class="option-button">
+                <div class="fa-solid fa-rotate-right" style="color: #000000;"></div>
+            </button>
+            
+            <!---- Link/PDF ---->
+            <button id="createLink" class="adv-option-button">
+                <i class="fa-solid fa-link" style="color: #000000;"></i>
+            </button>
+            <button id="unLink" class="option-button">
+                <i class="fa-solid fa-link-slash" style="color: #000000;"></i>
+            </button>
+            <button id="generate-pdf">
+                <i class="fa-regular fa-file-pdf" style="color: #000000;"></i>
+            </button>
+
+            <!---- Alinhamento ---->
+            <button id="justifyLeft" class="option-button align">
+                <i class="fa-solid fa-align-left" style="color: #000000;"></i>
+            </button>
+            <button id="justifyCenter" class="option-button align">
+                <i class="fa-solid fa-align-center" style="color: #000000;"></i>
+            </button>
+            <button id="justifyRight" class="option-button align">
+                <i class="fa-solid fa-align-right" style="color: #000000;"></i>
+            </button>
+            <button id="justifyFull" class="option-button align">
+                <i class="fa-solid fa-align-justify" style="color: #000000;"></i>
+            </button>
+            <button id="indent" class="option-button spacing">
+                <i class="fa-solid fa-indent" style="color: #000000;"></i>
+            </button>
+            <button id="outdent" class="option-button spacing">
+                <i class="fa-solid fa-outdent" style="color: #000000;"></i>
+            </button>
+            
+            <!---- Título ---->
+            <select id="formatBlock" class="adv-option-button">
+                <option value="H1">Head 1</option>
+                <option value="H2">Head 2</option>
+                <option value="H3">Head 3</option>
+                <option value="H4">Head 4</option>
+                <option value="H5">Head 5</option>
+                <option value="H6">Head 6</option>
+            </select>
+            
+            <!---- Fonte ---->
+            <select id="fontName" class="adv-option-button"></select>
+            <select id="fontSize" class="adv-option-button"></select>
+            
+            <!---- Cor ---->
+            <div class="input-wrapper">
+                <input type="color" id="foreColor" class="adv-option-button" />
+                <label for="foreColor">Font Color</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="color" id="backColor" class="adv-option-button" />
+                <label for="backColor">Highlight Color</label>
+            </div>
+        </div>
+        <div id="text-input" contenteditable="true"></div>
+    </div>
+    
+    <!---- Biblioteca html2pdf ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+    <!---- Script ---->
+    <script src="main.js" defer></script>
+</body>
+</html>
